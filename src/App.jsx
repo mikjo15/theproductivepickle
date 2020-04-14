@@ -1,10 +1,10 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import Jumbotron from "./components/jumbotron";
+import "./components/header";
 
 function App() {
-  return <Jumbotron />
+  
 }
 
 export default App;
