@@ -1,0 +1,27 @@
+/* Header section */
+.bg {
+  /* The image used */
+  background-image: url("./images/header.jpg");
+  /* Full height */
+  height: 90vh;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-txt {
+    margin-top: 12%;
+    margin-right: 10%;
+    font-size: 1.5rem;
+  }
+
+  .bg {
+    height: 30vh;
+  }
+}
