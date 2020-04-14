@@ -3,7 +3,7 @@
   /* The image used */
   background-image: url("./images/header.jpg");
   /* Full height */
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   /* Center and scale the image nicely */
   background-position: center;
@@ -14,7 +14,11 @@
   position: relative;
 }
 
+/* Navbar */
+
+
 @media only screen and (max-width: 768px) {
+  /* Header */
   .header-txt {
     margin-top: 12%;
     margin-right: 10%;
@@ -23,5 +27,15 @@
 
   .bg {
     height: 30vh;
+  }
+
+  /* Navbar */
+  .nav-item a {
+    color: black;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-item :hover {
+    border-bottom: 3px solid black;
   }
 }
