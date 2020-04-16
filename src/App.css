@@ -9,15 +9,38 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.header-textbox {
+  flex-grow: 1;
+  width: 100%;
   justify-content: center;
   align-items: flex-start;
   position: relative;
 }
 
-/* Navbar */
+@media only screen and (min-width: 768px) {
 
+  /* Navbar */
+  .nav-transparent {
+    background-color: transparent !important;
+    border-color: transparent;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  .nav-item a {
+    color: white;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-item :hover {
+    border-bottom: 3px solid white;
+  }
+}
 
 @media only screen and (max-width: 768px) {
+
   /* Header */
   .header-txt {
     margin-top: 12%;
