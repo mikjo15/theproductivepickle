@@ -22,13 +22,6 @@
 @media only screen and (min-width: 768px) {
 
   /* Navbar */
-  .nav-transparent {
-    background-color: transparent !important;
-    border-color: transparent;
-    background-image: none;
-    box-shadow: none;
-  }
-
   .nav-item a {
     color: white;
     border-bottom: 3px solid transparent;
