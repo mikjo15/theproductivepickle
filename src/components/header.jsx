@@ -1,6 +1,6 @@
 import React from "react";
 import useWindowSize from '../use-window-size';
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
 function Header() {
   const windowSize = useWindowSize();

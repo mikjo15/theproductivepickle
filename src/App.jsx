@@ -2,9 +2,9 @@ import React from "react";
 import useWindowSize from "./use-window-size";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import Header from "./components/header";
-import Navbar from "./components/navbar";
-import Pricing from "./components/pricing";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Pricing from "./components/Pricing";
 
 
 function App() {
