@@ -4,10 +4,10 @@ import pricing from "../pricing";
 
 function Pricing() {
   return (
-    <section>
+    <section className="mx-3">
       <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 text-center">
         <h1 className="display-4">Pricing</h1>
-        <p className="lead">Quickly build an effective pricing table for your potential
+        <p className="lead mx-lg-7">Quickly build an effective pricing table for your potential
           customers with this Bootstrap example. It's built with default Bootstrap
           components and utilities with little customization.
         </p>

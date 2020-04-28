@@ -20,12 +20,12 @@ function Card(props) {
   }
 
  return (
-   <div className="card mb-4 box-shadow">
-     <img className="card-img-top" src={props.img} alt="Copywriting"/>
+   <div className="card mb-4 box-shadow rounded-25 bg-success text-light border-light">
+     <img className="card-img-top rounded-25" src={props.img} alt="Copywriting"/>
      <div className="card-body">
        <h1 className="card-title">{props.title}</h1>
        <BenefitList benefits={props.benefits} />
-       <button type="button" className="btn btn-lg btn-block btn-outline-success">{props.price}</button>
+       <button type="button" className="btn btn-lg btn-block btn-outline-light">{props.price}</button>
      </div>
    </div>
  )

@@ -5,20 +5,20 @@ import Fullthing from "./images/FullThing.jpg";
 const pricing = [
   {
     img: Copywriting,
-    title: "Copywriting",
-    benefits: ["Compelling copy", "More sales"],
+    title: "Copy",
+    benefits: ["Description", "Feature", "Benefit"],
     price: "$100"
   },
   {
     img: Webdev,
-    title: "Web Developement",
-    benefits: ["Website desing", "Website setup"],
+    title: "Website",
+    benefits: ["Description", "Feature", "Benefit"],
     price: "$200"
   },
   {
     img: Fullthing,
-    title: "Full Thing",
-    benefits: ["Compelling copywriting", "Website design", "Compelling website that sells"],
+    title: "The Lot",
+    benefits: ["Description", "Feature", "Benefit"],
     price: "$500"
   }
 ]
