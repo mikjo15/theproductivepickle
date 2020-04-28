@@ -61,6 +61,11 @@
   border-radius: 25px;
 }
 
+.fill-div {
+  width: auto;
+  height: 100vh;
+}
+
 @media only screen and (max-width: 768px) {
 
   /* Header */
