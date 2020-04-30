@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       {windowSize.width < 768 && <Navbar />}
       <Pricing />
       <About />
+      <Contact />
     </div>
   )
 }
