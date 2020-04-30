@@ -18,6 +18,10 @@ function Contact() {
         </p>
         <form>
           <div class="form-group">
+            <label for="name">First name</label>
+            <input type="text" class="form-control" placeholder="First name" />
+          </div>
+          <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
           </div>
