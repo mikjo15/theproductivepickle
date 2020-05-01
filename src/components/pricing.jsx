@@ -6,10 +6,11 @@ function Pricing() {
   return (
     <section className="mx-3">
       <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 text-center">
-        <h1 className="display-4">Pricing</h1>
-        <p className="lead mx-lg-7">Quickly build an effective pricing table for your potential
-          customers with this Bootstrap example. It's built with default Bootstrap
-          components and utilities with little customization.
+        <h1 className="display-4">How can I help you?</h1>
+        <p className="lead mx-lg-7">
+          Let me help you boost your sales, by writing compelling sales copy or
+          articles for your site, make a beautiful website for your content, or
+          the lot, where you get both content and website. 
         </p>
       </div>
 

@@ -6,20 +6,20 @@ const pricing = [
   {
     img: Copywriting,
     title: "Copy",
-    benefits: ["Description", "Feature", "Benefit"],
-    price: "$100"
+    benefits: ["SEO optimized", "Compelling sales copy", "Inspiring blog posts", "Connect with your audience"],
+    price: "$20"
   },
   {
     img: Webdev,
     title: "Website",
-    benefits: ["Description", "Feature", "Benefit"],
-    price: "$200"
+    benefits: ["Showcase your products", "Post your content", "Make your dream a reality", "Beautiful design"],
+    price: "$50"
   },
   {
     img: Fullthing,
     title: "The Lot",
-    benefits: ["Description", "Feature", "Benefit"],
-    price: "$500"
+    benefits: ["Customized to your needs", "Compelling copy", "SEO optimized", "Showcase your products and content"],
+    price: "$100"
   }
 ]
 
