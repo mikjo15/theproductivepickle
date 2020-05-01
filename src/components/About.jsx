@@ -5,10 +5,41 @@ function About() {
  return (
    <section className="row m-0">
      <div className="col-md-8 container-fill bg-success text-center text-light pt-5 px-md-5 pb-4">
-       <h1>Im the description</h1>
-       <p className="m-md-5 my-5 mx-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae tempus quam. Tellus in metus vulputate eu. Ac tincidunt vitae semper quis lectus. Tortor posuere ac ut consequat. In hac habitasse platea dictumst quisque sagittis purus. Metus vulputate eu scelerisque felis. Sollicitudin ac orci</p>
-       <p className="m-md-5 my-5 mx-4">Duis at tellus at urna. Ipsum dolor sit amet consectetur adipiscing elit. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Dolor purus non enim praesent elementum. Malesuada proin libero nunc consequat interdum</p>
-       <p className="m-md-5 my-5 mx-4">Adipiscing elit duis tristique sollicitudin nibh sit. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Consequat interdum varius sit amet mattis. Sed risus ultricies tristique nulla aliquet enim. Suspendisse potenti nullam ac tortor vitae purus. Bibendum enim facilisis gravida neque convallis a cras semper.</p>
+       <div>
+         <h3 className="m-0">Who am I?</h3>
+         <p>
+           My name is Mikkel. I'm a gymnastics teacher at Ågård Efterskole, with a
+           bachelor in engineering - health and welfare technology. I really like to
+           learn new skills and I am currently on the way to mastering copywriting
+           and web development.
+         </p>
+       </div>
+
+       <div className="m-md-4 my-5 mx-4">
+         <h3 className="m-0">Why this site?</h3>
+         <p className="m-0">There are two reasons for making this site</p>
+         <ol className="mx-5">
+           <li>Practising and teaching is the most efficient way of mastering a skill, while it can help others at the same time.</li>
+           <li>I get a platform to show you, how I can help you the most.</li>
+         </ol>
+       </div>
+
+       <div className="m-md-4 my-5 mx-4">
+         <h3 className="m-0">So what does this mean to you? </h3>
+         <p>
+           Well, if you are a gymnast or coach, it means that you can head over
+           to my blog and find systems and ideas for your classes. I got 10 years
+           of experience as a tumbler and have had some of the best coaches in the world.
+         </p>
+         <p>
+           If you need a website or copy, it means you should contact me right
+           now to get a very promising freelancer to boost your sales.
+         </p>
+         <p>
+           So contact me here before your competitor
+         </p>
+       </div>
+
        <button type="button" className="btn btn-lg btn-block btn-outline-light">BOOST YOUR BRAND</button>
      </div>
      <div className="col-md-4 container-fill bg-success p-0">
