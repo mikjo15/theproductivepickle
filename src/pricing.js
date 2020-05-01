@@ -18,7 +18,7 @@ const pricing = [
   {
     img: Fullthing,
     title: "The Lot",
-    benefits: ["Customized to your needs", "Compelling copy", "SEO optimized", "Showcase your products and content"],
+    benefits: ["Customized website", "Compelling copy", "SEO optimized", "Showcase your products and content"],
     price: "$100"
   }
 ]

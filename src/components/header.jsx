@@ -13,9 +13,9 @@ function Header() {
           <h1 className="text-light header-txt1">LOOKING FOR A</h1>
           <nav className="navbar navbar-expand header-nav">
             <ul className="navbar-nav">
-              <li className="nav-item"><a className="nav-link" href="/">TUMBLING COACH</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">WEB DEVELOPER</a></li>
-              <li className="nav-item"><a className="nav-link" href="/">COPYWRITER</a></li>
+              <li className="nav-item"><a className="nav-link" href="#contact">TUMBLING COACH</a></li>
+              <li className="nav-item"><a className="nav-link" href="#pricing">WEB DEVELOPER</a></li>
+              <li className="nav-item"><a className="nav-link" href="#pricing">COPYWRITER</a></li>
             </ul>
           </nav>
         </div>

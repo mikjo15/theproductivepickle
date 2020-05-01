@@ -36,11 +36,10 @@ function About() {
            now to get a very promising freelancer to boost your sales.
          </p>
          <p>
-           So contact me here before your competitor
+           So <a className="text-light" href="#pricing"><em><strong>let me help you</strong></em></a> boost your sales before your competitor,
+           or <a className="text-light" href="#contact"><em><strong>let me inspire you</strong></em></a> every month.
          </p>
        </div>
-
-       <button type="button" className="btn btn-lg btn-block btn-outline-light">BOOST YOUR BRAND</button>
      </div>
      <div className="col-md-4 container-fill bg-success p-0">
        <img src={HandstandImg} alt="Handstand-with-computer" className="fill-div"></img>
