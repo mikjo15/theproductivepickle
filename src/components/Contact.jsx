@@ -8,13 +8,13 @@ function Contact() {
         <img src={Working} alt="Handstand-with-computer" className="fill-div"></img>
       </div>
       <div className="col-md-7 container-fill text-center text-light pt-5 px-md-5 pb-4 align-items-center my-auto">
-        <h1>Im the description</h1>
+        <h1>Get inspired every month</h1>
         <p className="m-md-5 my-5 mx-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Auctor neque vitae
-          tempus quam. Tellus in metus vulputate eu. Ac tincidunt vitae semper quis
-          lectus. Tortor posuere ac ut consequat. In hac habitasse platea dictumst
-          quisque sagittis purus. Metus vulputate eu scelerisque felis. Sollicitudin ac orci
+          About once or twice a month I will write a new blog post. It can be
+          about pretty much anything, but it will mainly be gymnastics, with a
+          little bit of productivity and side projects in between. Subscribe to
+          get noticed when a new blog post is out, and follow my blog as it gets 
+          better and better.
         </p>
         <form>
           <div class="form-group">
@@ -25,7 +25,7 @@ function Contact() {
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
           </div>
-          <button type="submit" class="btn btn-lg btn-block btn-outline-light">Submit</button>
+          <button type="submit" class="btn btn-lg btn-block btn-outline-light">SUBSCRIBE</button>
         </form>
       </div>
     </section>
