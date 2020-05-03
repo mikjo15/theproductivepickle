@@ -1,5 +1,6 @@
 import React from "react";
 import Working from "../images/Working.jpg";
+import Subscribeform from "./Subscribeform";
 
 function Contact() {
   return (
@@ -16,17 +17,7 @@ function Contact() {
           get noticed when a new blog post is out, and follow my blog as it gets
           better and better.
         </p>
-        <form>
-          <div class="form-group">
-            <label for="name">First name</label>
-            <input type="text" class="form-control" placeholder="First name" />
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-          </div>
-          <button type="submit" class="btn btn-lg btn-block btn-outline-light">SUBSCRIBE</button>
-        </form>
+        <Subscribeform />
       </div>
     </section>
   )
