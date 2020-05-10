@@ -1,25 +1,19 @@
 import React from "react";
-import useWindowSize from "./use-window-size";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Pricing from "./components/Pricing";
-import About from "./components/About";
-import Contact from "./components/Contact";
-
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Blog from "./pages/Blog";
 
 function App() {
-  const windowSize = useWindowSize();
-
   return (
-    <div>
-      <Header />
-      {windowSize.width < 768 && <Navbar />}
-      <Pricing />
-      <About />
-      <Contact />
-    </div>
+    <Router>
+      <Route exact path="/" component={Homepage}/>
+      <Route exact path="/blog" component={Blog}/>
+    </Router>
   )
 }
 
