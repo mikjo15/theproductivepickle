@@ -9,7 +9,7 @@ function Navbar() {
           <Link to="/blog" className="nav-link">BLOG<span class="sr-only">(current)</span></Link>
         </li>
         <li className="nav-item mobile-black">
-          <a className="nav-link" href="/">CV</a>
+          <Link to="/CV" className="nav-link">CV</Link>
         </li>
         <li className="nav-item mobile-black">
           <a className="nav-link" href="/">PORTFOLIO</a>
