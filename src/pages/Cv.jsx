@@ -5,6 +5,7 @@ import Headercv from "../components/Headercv"
 import Resume from "../components/Resume"
 import Samplers from "../components/Samplers";
 import Jobs from "../components/Jobs";
+import Gymnastics from "../components/Gymnastics";
 
 function Cv() {
   const windowSize = useWindowSize();
@@ -16,6 +17,7 @@ function Cv() {
       <Resume />
       <Samplers />
       <Jobs />
+      <Gymnastics />
     </div>
   )
 }
