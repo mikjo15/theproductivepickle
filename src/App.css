@@ -104,6 +104,37 @@
   margin-top: 15%
 }
 
+/* Customised bootstrap */
+.w-40 {
+  width: 40%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.fab {
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* Contact */
+.contact-btn {
+  display: block;
+  color: #212529;
+}
+
+a.contact-btn:hover {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
 @media only screen and (max-width: 768px) {
 
   /* Header */
