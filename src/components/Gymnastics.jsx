@@ -1,4 +1,5 @@
 import React from "react";
+import { tumbling, dmt, perf, tumAch, dmtAch } from "../gymnastics.js";
 
 function Gymnastics() {
   return (
@@ -18,22 +19,28 @@ function Gymnastics() {
             <hr />
             <p class="mb-2"><em>Tumbling</em></p>
 
-            <div class="d-flex justify-content-between">
-              <p class="m-0 text-left"></p>
-              <p class="m-0 text-right"></p>
-            </div>
+            {tumbling.map(entry => (
+              <div className="d-flex justify-content-between">
+                <p class="m-0 text-left">{entry.team}</p>
+                <p class="m-0 text-right">{entry.time}</p>
+              </div>
+            ))}
 
             <p class="my-2"><em>DMT</em></p>
-            <div class="d-flex justify-content-between">
-              <p class="m-0"></p>
-              <p class="m-0"></p>
-            </div>
+            {dmt.map(entry => (
+              <div className="d-flex justify-content-between">
+                <p class="m-0 text-left">{entry.team}</p>
+                <p class="m-0 text-right">{entry.time}</p>
+              </div>
+            ))}
 
             <p class="my-2"><em>Performance</em></p>
-            <div class="d-flex justify-content-between">
-              <p class="m-0"></p>
-              <p class="m-0"></p>
-            </div>
+            {perf.map(entry => (
+              <div className="d-flex justify-content-between">
+                <p class="m-0 text-left">{entry.team}</p>
+                <p class="m-0 text-right">{entry.time}</p>
+              </div>
+            ))}
 
           </div>
 
@@ -44,16 +51,20 @@ function Gymnastics() {
             <hr />
 
             <p class="mb-2"><em>Tumbling</em></p>
-            <div class="d-flex justify-content-between">
-              <p class="m-0 "></p>
-              <p class="m-0 "></p>
-            </div>
+            {tumAch.map(entry => (
+              <div class="d-flex justify-content-between">
+                <p class="m-0 ">{entry.year} - {entry.comp}</p>
+                <p class="m-0 ">{entry.place}</p>
+              </div>
+            ))}
 
             <p class="mb-2"><em>DMT</em></p>
-            <div class="d-flex justify-content-between">
-              <p class="m-0 "></p>
-              <p class="m-0 "></p>
-            </div>
+            {dmtAch.map(entry => (
+              <div class="d-flex justify-content-between">
+                <p class="m-0 ">{entry.year} - {entry.comp}</p>
+                <p class="m-0 ">{entry.place} place</p>
+              </div>
+            ))}
 
             </div>
 

@@ -1,8 +1,5 @@
 import React from "react";
 import Iframe from "react-iframe";
-import Copywriting from "../images/Copywriting.jpg";
-import Webdev from "../images/WebDev.jpg";
-import Fullthing from "../images/FullThing.jpg";
 
 function Samplers() {
   return (
