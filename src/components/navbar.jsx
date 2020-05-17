@@ -12,7 +12,7 @@ function Navbar() {
           <Link to="/CV" className="nav-link">CV</Link>
         </li>
         <li className="nav-item mobile-black">
-          <a className="nav-link" href="/">PORTFOLIO</a>
+          <Link to="/portfolio" className="nav-link">PORTFOLIO</Link>
         </li>
         <li className="nav-item mobile-black">
           <a className="nav-link" href="/">PB APP</a>
