@@ -17,8 +17,9 @@ function Pricing() {
       <div className="container">
         <div className="card-deck mb-3 text-center">
 
-          {pricing.map(tier => (
+          {pricing.map((tier, index) => (
             <Card
+              key={index}
               img={tier.img}
               title={tier.title}
               benefits={tier.benefits}

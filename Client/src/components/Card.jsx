@@ -11,8 +11,8 @@ function Card(props) {
     return (
       <ul className="list-unstyled mt-3 mb-4">
         {
-          items.map(item => (
-            <ListItem item={item} />
+          items.map((item, index) => (
+            <ListItem key={index} item={item} />
           ))
         }
       </ul>
