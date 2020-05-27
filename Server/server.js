@@ -19,8 +19,10 @@ app.get("/api/memberAdd", (req, res) => {
   mailchimp
   .post(`/lists/${list_id}/members/`, {
     email_address: req.query.email,
-    name: req.query.name,
-    status: "subscribed"
+    status: "subscribed",
+    merge_fields: {
+        FNAME: req.query.name
+    }
   })
   .then(result => {
     res.send(result);
