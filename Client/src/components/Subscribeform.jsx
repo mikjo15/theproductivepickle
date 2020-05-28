@@ -6,6 +6,8 @@ function Subscribeform() {
     email: ""
   })
 
+  const [subStatus, setSubStatus] = useState("SUBSCRIBE");
+
   function handleChange(event) {
     const {name, value} = event.target;
 
@@ -21,10 +23,23 @@ function Subscribeform() {
     event.preventDefault();
 
     if (subscriber.name && subscriber.email) {
-      fetch(`/api/memberAdd?email=${subscriber.email}`)
+      fetch(`/api/memberAdd?email=${subscriber.email}&name=${subscriber.name}`)
       .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
+      .then(json => {
+        if (json.status === "subscribed") {
+          setSubStatus("Thank you! You have now been subscribed");
+        } else if (json.title === "Member Exists") {
+          setSubStatus("You're already a member. Great!");
+        } else {
+          setSubStatus("Sorry, something went wrong. Try again.");
+        }
+      })
+      .catch(err => console.log("error", err))
+
+      setSubscriber({
+        name: "",
+        email: ""
+      });
     }
   }
 
@@ -56,7 +71,7 @@ function Subscribeform() {
           required
         />
       </div>
-      <button type="submit" className="btn btn-lg btn-block btn-outline-light">SUBSCRIBE</button>
+      <button type="submit" className="btn btn-lg btn-block btn-outline-light">{subStatus}</button>
     </form>
   )
 }
