@@ -1,6 +1,8 @@
 const express = require("express");
 const path = require("path");
 const Mailchimp = require("mailchimp-api-v3");
+const mongoose = require("mongoose");
+let Post = require("./models/post.model.js");
 require("dotenv").config();
 
 const mc_api_key = process.env.MAILCHIMP_API_KEY;
@@ -32,9 +34,18 @@ app.get("/api/memberAdd", (req, res) => {
   })
 })
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, '/../client/public', 'index.html'));
-})
+mongoose.connect("mongodb://localhost:27017/postsDB", { useNewUrlParser: true, useUnifiedTopology: true });
+
+app.post("/addPost", (req, res) => {
+  const title = req.body.title;
+  const content = req.body.content;
+
+  const newPost = new Post({title, content});
+
+  newPost.save()
+    .then(() => res.json("Post Published"))
+    .catch(err => res.status(400).json("Error: " + err));
+});
 
 app.listen(port, () => {
   console.log('Server is running on port: 5000');
