@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 function Compose() {
-  const [postList, setPostList] = useState([]);
-
-  // Get this to work
-  useEffect(() => {
-    axios.get("http://localhost:3000/posts")
-    .then(response => {
-      const data = response.data;
-      setPostList(data);
-    });
-  }, [postList])
 
   const [post, setPost] = useState({
     title: "",
@@ -66,12 +56,6 @@ function Compose() {
         <button onClick={submitPost}>Add</button>
       </form>
 
-      {postList.map((post, index) =>
-        <div key={index}>
-          <h1>{post.title}</h1>
-          <p>{post.content}</p>
-        </div>
-      )}
     </div>
   )
 }
