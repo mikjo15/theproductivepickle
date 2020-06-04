@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Compose() {
+  const [postList, setPostList] = useState([]);
+
+  // Get this to work
+  useEffect(() => {
+    axios.get("http://localhost:3000/posts")
+    .then(response => {
+      const data = response.data;
+      setPostList(data);
+    });
+  }, [postList])
+
   const [post, setPost] = useState({
     title: "",
     content: ""
   });
-
-  const [currentPost, setCurrentPost] = useState({
-    title: "",
-    content: ""
-  })
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -25,11 +31,6 @@ function Compose() {
 
   function submitPost(event) {
     event.preventDefault();
-    // change setCurrentPost to create/update db
-    setCurrentPost({
-      title: post.title,
-      content: post.content
-    });
 
     axios.post("http://localhost:3000/addPost", post)
     .then(res => console.log(res.data));
@@ -40,10 +41,9 @@ function Compose() {
     });
   }
 
-
   return (
     <div className="container w-50 mt-5">
-      <form>
+      <form className="mb-5">
         <div className="form-group">
           <input
             className="form-control"
@@ -66,9 +66,12 @@ function Compose() {
         <button onClick={submitPost}>Add</button>
       </form>
 
-      <h1 className="mt-5">{currentPost.title}</h1>
-
-      <p>{currentPost.content}</p>
+      {postList.map((post, index) =>
+        <div key={index}>
+          <h1>{post.title}</h1>
+          <p>{post.content}</p>
+        </div>
+      )}
     </div>
   )
 }
