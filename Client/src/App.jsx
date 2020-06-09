@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import Cv from "./pages/Cv";
 import Portfolio from "./pages/Portfolio";
 import Compose from "./pages/Compose";
+import ShowPost from "./pages/ShowPost";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route exact path="/Cv" component={Cv}/>
       <Route exact path="/portfolio" component={Portfolio}/>
       <Route exact path="/compose" component={Compose}/>
+      <Route exact path="/posts/:title" component={ShowPost}/>
     </Router>
   )
 }

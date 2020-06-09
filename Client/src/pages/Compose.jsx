@@ -56,6 +56,13 @@ function Compose() {
         <button onClick={submitPost}>Add</button>
       </form>
 
+      <h1>Preview</h1>
+
+      <div className="text-dark">
+        <h3 onChange={handleChange} value={post.title} className="display-5 p-3 mx-auto">{post.title}</h3>
+        <p onChange={handleChange} value={post.content} className="w-100 mx-auto pb-3 m-0">{post.content}</p>
+      </div>
+
     </div>
   )
 }

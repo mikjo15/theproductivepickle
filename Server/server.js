@@ -3,6 +3,7 @@ const path = require("path");
 const Mailchimp = require("mailchimp-api-v3");
 const mongoose = require("mongoose");
 let Post = require("./models/post.model.js");
+const _ = require("lodash");
 require("dotenv").config();
 
 const mc_api_key = process.env.MAILCHIMP_API_KEY;
@@ -46,7 +47,7 @@ app.get("/api/memberAdd", (req, res) => {
 })
 
 // Get all the posts from mongodb atlas and send them back to frontend
-app.get('/posts', async (req, res) => {
+app.get("/posts", async (req, res) => {
   const posts = await Post.find({});
 
   try {
@@ -56,9 +57,16 @@ app.get('/posts', async (req, res) => {
   }
 });
 
+app.get(`/posts/:title`, (req, res) => {
+  let title = req.params.title;
+  const post = Post.findOne({title: title}, function(err, post) {
+      res.json(post);
+  })
+})
+
 // Add post to mongodb
 app.post("/addPost", (req, res) => {
-  const title = req.body.title;
+  const title = _.lowerCase(req.body.title);
   const content = req.body.content;
 
   const newPost = new Post({title, content});

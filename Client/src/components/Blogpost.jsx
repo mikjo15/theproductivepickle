@@ -2,19 +2,25 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "../components/Post";
 
-// TODO: Make the blog post preview shorter
-
 function Blogpost() {
   const [postList, setPostList] = useState([]);
 
   // Get this to work
   useEffect(() => {
+    let data = [];
+    let unmounted = false;
+
     axios.get("http://localhost:3000/posts")
     .then(response => {
-      const data = response.data;
-      setPostList(data);
+      if (!unmounted){
+        data = response.data;
+        setPostList(data);
+      }
     });
-  }, [postList])
+
+    return () => {unmounted = true}
+
+  }, [postList]);
 
   return (
   <section className="bg-success text-center text-light">
@@ -24,10 +30,9 @@ function Blogpost() {
       <Post
         key={index}
         title={post.title}
-        content={post.content}
+        content={post.content.substring(0, 180) + " ..."}
       />
     )}
-
   </section>
 )
 }
