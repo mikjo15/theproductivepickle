@@ -17,11 +17,9 @@ function About() {
 
        <div className="m-md-4 my-5 mx-4">
          <h3 className="m-0">Why this site?</h3>
-         <p className="m-0">There are two reasons for making this site</p>
-         <ol className="mx-5">
-           <li>Practising and teaching is the most efficient way of mastering a skill, while it can help others at the same time.</li>
-           <li>I get a platform to show you, how I can help you the most.</li>
-         </ol>
+         <p className="mb-3">There are two reasons for making this site:</p>
+           <p className="mx-5">1. Practising and teaching is the most efficient way of mastering a skill, while it can help others at the same time.</p>
+           <p className="mx-5">2. I get a platform to show you, how I can help you the most.</p>
        </div>
 
        <div className="m-md-4 my-5 mx-4">

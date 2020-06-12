@@ -9,14 +9,16 @@ function Navbar() {
           <Link to="/blog" className="nav-link">BLOG<span className="sr-only">(current)</span></Link>
         </li>
         <li className="nav-item mobile-black">
+          <a className="nav-link" href="/">HOME</a>
+        </li>
+        <li className="nav-item mobile-black">
           <Link to="/CV" className="nav-link">CV</Link>
         </li>
-        <li className="nav-item mobile-black">
-          <Link to="/portfolio" className="nav-link">PORTFOLIO</Link>
-        </li>
-        <li className="nav-item mobile-black">
-          <a className="nav-link" href="/">PB APP</a>
-        </li>
+        {
+          // <li className="nav-item mobile-black">
+          //   <Link to="/portfolio" className="nav-link">PORTFOLIO</Link>
+          // </li>
+        }
       </ul>
     </nav>
   )

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Post from "../components/Post";
+import PreviewPost from "../components/PreviewPost";
 
 function Blogpost() {
   const [postList, setPostList] = useState([]);
 
-  // Get this to work
+  // TODO: Fix
+  // useEffect is constantly calling...
   useEffect(() => {
     let data = [];
     let unmounted = false;
@@ -26,13 +27,14 @@ function Blogpost() {
   <section className="bg-success text-center text-light">
     <h1 className="display-4 pt-4">Latest posts</h1>
 
-    {postList.map((post, index) =>
-      <Post
-        key={index}
-        title={post.title}
-        content={post.content.substring(0, 180) + " ..."}
-      />
-    )}
+    <div className="w-50 mx-auto">
+      {
+        postList.length > 0
+          ? postList.map(post => <PreviewPost post={post} key={post._id} />)
+          : < h1 > Loading... < /h1>
+      }
+    </div>
+
   </section>
 )
 }

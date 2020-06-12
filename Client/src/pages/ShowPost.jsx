@@ -1,36 +1,49 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import _ from "lodash";
+import {EditorState, convertFromRaw} from 'draft-js';
+import '../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import {stateToHTML} from 'draft-js-export-html'
 
 function ShowPost(props) {
-  const [post, setPost] = useState({
-    title: "",
-    content: ""
-  })
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState(EditorState.createEmpty())
 
-  // TODO: Make text format proper, so its not just one big paragraph
-  // TODO: Dashes instead of spaces in url
+  // TODO: Dashes instead of spaces in url (kebabcase)
   // TODO: Make a delete function
   // TODO: Check for dublicates in db
   // TODO: Handle 404
   // TODO: Handle posts that don't exist
 
   useEffect(() => {
-    const title = window.location.pathname.split("/").pop();
+    axios.get(`http://localhost:3000/posts/${props.match.params.title}`).then(post => {
+      setTitle(post.data.title)
+      const contentState = convertFromRaw(post.data.description)
+      const editorState = EditorState.createWithContent(contentState)
+      setDescription(editorState)
+    }).catch(err => console.log("An error occured:", err))
 
-      axios.get("http://localhost:3000/posts/" + title)
-      .then(response => setPost(response.data));
+  }, [props.match.params.title])
 
-  }, []);
+  const convertDescriptionFromJSONToHTML = () => {
+    try {
+      return {
+        __html: stateToHTML(description.getCurrentContent())
+      }
+    } catch (exp) {
+      console.log(exp)
+      return {__html: 'Error'}
+    }
+  }
 
-  return (
-    <section className="bg-success text-center text-light">
-      <div className="text-light bg-post">
-        <h3 className="display-5 p-3">{_.startCase(post.title)}</h3>
-        <p className="w-50 mx-auto pb-3 m-0">{post.content}</p>
-      </div>
-    </section>
-  )
+  return (<section className="bg-success text-center text-light">
+
+    <div className="bg-post w-50 mx-auto">
+      <h1>{_.upperFirst(title)}</h1>
+      <div dangerouslySetInnerHTML={convertDescriptionFromJSONToHTML()}></div>
+    </div>
+
+  </section>)
 }
 
 export default ShowPost;
