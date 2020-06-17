@@ -9,8 +9,8 @@ import Homepage from "./pages/Homepage";
 import Blog from "./pages/Blog";
 import Cv from "./pages/Cv";
 import Portfolio from "./pages/Portfolio";
-import Compose from "./pages/Compose";
 import ShowPost from "./pages/ShowPost";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Route exact path="/blog" component={Blog}/>
       <Route exact path="/Cv" component={Cv}/>
       <Route exact path="/portfolio" component={Portfolio}/>
-      <Route exact path="/compose" component={Compose}/>
+      <Route exact path="/compose" component={Login}/>
       <Route exact path="/posts/:title" component={ShowPost}/>
     </Router>
   )
