@@ -1,5 +1,5 @@
 import React from "react";
-import Working from "../images/Working.jpg";
+import Working from "../images/Working.webp";
 import Subscribeform from "./Subscribeform";
 
 function Contact() {

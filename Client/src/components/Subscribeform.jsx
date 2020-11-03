@@ -23,18 +23,20 @@ function Subscribeform() {
     event.preventDefault();
 
     if (subscriber.name && subscriber.email) {
-      fetch(`/api/memberAdd?email=${subscriber.email}&name=${subscriber.name}`)
-      .then(res => res.json())
-      .then(json => {
-        if (json.status === "subscribed") {
-          setSubStatus("Thank you! You have now been subscribed");
-        } else if (json.title === "Member Exists") {
-          setSubStatus("You're already a member. Great!");
-        } else {
-          setSubStatus("Sorry, something went wrong. Try again.");
-        }
-      })
-      .catch(err => console.log("error", err))
+    fetch(`/api/memberAdd?email=${subscriber.email}&name=${subscriber.name}`)
+    .then(res => res.json())
+    .then(json => {
+      if (json.status === "subscribed") {
+        setSubStatus("Thank you! You have now been subscribed");
+      } else if (json.title === "Member Exists") {
+        setSubStatus("You're already a member. Great!");
+      } else {
+        console.log(json);
+      }
+    })
+    .catch(err => console.log("error", err))
+
+    setSubStatus("Something happened!");
 
       setSubscriber({
         name: "",

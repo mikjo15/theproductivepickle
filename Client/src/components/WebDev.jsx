@@ -1,6 +1,6 @@
 import React from "react";
-import WebExample from "../images/websiteex2.JPG";
-import WebExample2 from "../images/websiteex.jpg";
+import WebExample from "../images/websiteex2.webp";
+import WebExample2 from "../images/websiteex.webp";
 
 function WebDev() {
   return (

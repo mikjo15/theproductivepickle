@@ -10,7 +10,6 @@ const multer = require('multer');
 const mc_api_key = process.env.MAILCHIMP_API_KEY;
 const list_id = process.env.LIST_ID;
 const url = process.env.ATLAS_URI;
-
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -53,7 +52,6 @@ const mailchimp = new Mailchimp(mc_api_key);
   }
 })()
 
-// Add subscriber to maillist
 app.get("/api/memberAdd", (req, res) => {
   mailchimp
     .post(`/lists/${list_id}/members/`, {

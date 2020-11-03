@@ -1,24 +1,27 @@
 {
   "name": "ttp3",
   "version": "0.1.0",
+  "homepage": "http://theproductivepickle.com",
   "private": true,
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.22",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
-    "draft-js": "^0.11.6",
+    "draft-js": "^0.11.7",
     "draft-js-export-html": "^1.4.1",
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-draft-wysiwyg": "^1.14.5",
     "react-iframe": "^1.8.0",
+    "react-mailchimp-subscribe": "^2.1.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

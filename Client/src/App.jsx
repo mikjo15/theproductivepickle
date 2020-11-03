@@ -8,21 +8,23 @@ import {
 import Homepage from "./pages/Homepage";
 import Blog from "./pages/Blog";
 import Cv from "./pages/Cv";
-import Portfolio from "./pages/Portfolio";
+//import Portfolio from "./pages/Portfolio";
 import ShowPost from "./pages/ShowPost";
 import Login from "./pages/Login";
+
 
 function App() {
   return (
     <Router>
-      <Route exact path="/" component={Homepage}/>
-      <Route exact path="/blog" component={Blog}/>
-      <Route exact path="/Cv" component={Cv}/>
-      <Route exact path="/portfolio" component={Portfolio}/>
-      <Route exact path="/compose" component={Login}/>
-      <Route exact path="/posts/:title" component={ShowPost}/>
+        <Route exact path="/" component={Homepage}/>
+        <Route exact path="/blog" component={Blog}/>
+        <Route exact path="/Cv" component={Cv}/>
+        <Route exact path="/posts/:title" component={ShowPost}/>
+        <Route exact path="/login" component={Login}/>
     </Router>
   )
 }
 
 export default App;
+
+// <Route exact path="/portfolio" component={Portfolio}/>

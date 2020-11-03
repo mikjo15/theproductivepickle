@@ -1,5 +1,5 @@
 import React from "react";
-import TeachingSystem from "../images/Undervisningssystem.jpg";
+import TeachingSystem from "../images/Undervisningssystem.webp";
 
 function WebDev() {
   return (

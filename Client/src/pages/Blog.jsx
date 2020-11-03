@@ -2,8 +2,8 @@ import React from "react";
 import useWindowSize from "../use-window-size";
 import Headerblog from "../components/Headerblog";
 import Navbar from "../components/Navbar";
-import Blogstart from "../components/Blogstart"
 import Blogpost from "../components/Blogpost"
+import ContactFooter from "../components/Contactfooterwhite";
 
 function Blog() {
   const windowSize = useWindowSize();
@@ -12,8 +12,8 @@ function Blog() {
     <div>
       <Headerblog />
       {windowSize.width < 768 && <Navbar />}
-      <Blogstart />
       <Blogpost />
+      <ContactFooter />
     </div>
   )
 }

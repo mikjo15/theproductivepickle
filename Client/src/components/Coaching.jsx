@@ -1,5 +1,5 @@
 import React from "react";
-import Tumblingsystemet from "../images/TumblingSystem.JPG";
+import Tumblingsystemet from "../images/TumblingSystem.webp";
 
 function Coaching() {
   return (

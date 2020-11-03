@@ -1,5 +1,5 @@
 import React from "react";
-import Copywriting from "../images/Copywriting.jpg"
+import Copywriting from "../images/Copywriting.webp"
 
 function Blogstart() {
     return (

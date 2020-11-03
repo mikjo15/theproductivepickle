@@ -1,8 +1,8 @@
 import React from "react";
 import Appex1 from "../images/appex2.webp";
 import Appex2 from "../images/appex3.webp";
-import Webex1 from "../images/websiteex.jpg";
-import Webex2 from "../images/websiteex2.JPG";
+import Webex1 from "../images/websiteex.webp";
+import Webex2 from "../images/websiteex2.webp";
 
 function Programming() {
   return (

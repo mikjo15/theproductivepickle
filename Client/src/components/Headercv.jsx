@@ -6,7 +6,7 @@ function Headercv() {
   const windowSize = useWindowSize();
 
   return (
-    <section className="bg d-flex flex-column">
+    <section className="bg-cv d-flex flex-column">
       <div className="layer d-flex flex-column">
         {windowSize.width > 768 && <Navbar />}
         <div className="header-textbox d-flex flex-column align-items-center">

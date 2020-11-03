@@ -1,6 +1,6 @@
-import Copywriting from "./images/Copywriting.jpg";
-import Webdev from "./images/WebDev.jpg";
-import Fullthing from "./images/FullThing.jpg";
+import Copywriting from "./images/Copywriting.webp";
+import Webdev from "./images/WebDev.webp";
+import Fullthing from "./images/FullThing.webp";
 
 const pricing = [
   {

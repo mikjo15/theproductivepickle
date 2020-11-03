@@ -1,5 +1,5 @@
 import React from "react";
-import HandstandImg from "../images/Handstand.jpg"
+import HandstandImg from "../images/Handstand.webp"
 
 function About() {
  return (

@@ -1,6 +1,6 @@
 import Placeholder from "./images/placeholder.jpg";
-import Handstand from "./images/Handstand.jpg";
-import Working from "./images/Working.jpg";
+import Handstand from "./images/Handstand.webp";
+import Working from "./images/Working.webp";
 
 const posts = [
   {

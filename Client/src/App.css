@@ -1,7 +1,7 @@
 /* Header section */
 .bg {
   /* The image used */
-  background-image: url("./images/header.jpg");
+  background-image: url("./images/header.webp");
   /* Full height */
   height: 100vh;
   width: 100%;
@@ -13,7 +13,19 @@
 
 .bg-blog {
   /* The image used */
-  background-image: url("./images/placeholder.jpg");
+  background-image: url("./images/blog.webp");
+  /* Full height */
+  height: 100vh;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-cv {
+  /* The image used */
+  background-image: url("./images/cv.webp");
   /* Full height */
   height: 100vh;
   width: 100%;

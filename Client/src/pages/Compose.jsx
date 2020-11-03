@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-// import axios from "axios";
 import {Editor} from 'react-draft-wysiwyg';
 import {EditorState, convertToRaw} from 'draft-js';
 import '../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import {stateToHTML} from 'draft-js-export-html'
+import {stateToHTML} from 'draft-js-export-html';
 
-function Compose() {
+function Compose(props) {
+
   const [title, setTitle] = useState('');
   const [shortDesc, setShortDesc] = useState("");
   const [description, setDescription] = useState(EditorState.createEmpty());
@@ -42,6 +42,8 @@ function Compose() {
 
   const onSubmit = (e) => {
     e.preventDefault()
+
+    if (title !== "" && shortDesc !== "" && description !== "") {
     const newPost = {
       title: title,
       shortDesc: shortDesc.substring(0, 180) + " ...",
@@ -60,6 +62,11 @@ function Compose() {
       setShortDesc("")
       setDescription(EditorState.createEmpty())
     }).catch(err => console.log("ERROR:", err))
+
+      window.location.replace("/blog");
+    } else {
+      console.log("Write something");
+    }
   }
 
   return (

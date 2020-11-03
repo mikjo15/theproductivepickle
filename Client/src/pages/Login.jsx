@@ -1,35 +1,53 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import Compose from "./Compose";
 
-function Login() {
+function Login(props) {
   const [login, setLogin] = useState({
     username: "",
     password: ""
   })
 
-  function handleChange(e) {
-    const { value, name } = e.target;
+  const [auth, setAuth] = useState(false);
+
+  function handleChange(event) {
+    const {name, value} = event.target;
 
     setLogin(prevValue => {
       return {
         ...prevValue,
-        [name]: value
-      };
-    });
+        [name]:value
+      }
+    })
   }
 
-  // TODO: Fix handleChange
-  // TODO: Make it change page, when submitted
+  function handleClick(e) {
+    e.preventDefault();
+
+    if (login.username === "i need to write" && login.password === "12345") {
+      setAuth(prevValue => !prevValue);
+    } else {
+      console.log("Try again");
+      setLogin({
+        username: "",
+        password: ""
+      })
+    }
+  }
 
   return (
+    <div>
+    {!auth && (
     <div className="text-center w-25 mx-auto m-5">
       <form className="form-signin">
         <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label>Username</label>
-        <input onChange={handleChange} type="username" className="form-control mb-3" placeholder="Username" value={login.username} required autofocus />
-        <label for="inputPassword">Password</label>
-        <input onChange={handleChange} type="password" id="inputPassword" className="form-control mb-3" placeholder="Password" value={login.password} required />
-        <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <input name="username" onChange={handleChange} value={login.username} type="username" className="form-control mb-3" placeholder="Username" required />
+        <label htmlFor="inputPassword">Password</label>
+        <input name="password" onChange={handleChange} value={login.password} type="password" id="inputPassword" className="form-control mb-3" placeholder="Password" required />
+        <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={handleClick}>Sign in</button>
       </form>
+    </div> )}
+    {auth && <Compose />}
     </div>
       )
     }

@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Pricing from "../components/Pricing";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import ContactFooter from "../components/Contactfooterwhite";
 
 function Homepage() {
   const windowSize = useWindowSize();
@@ -16,6 +17,7 @@ function Homepage() {
     <Pricing />
     <About />
     <Contact />
+    <ContactFooter />
   </div>
 )
 }
